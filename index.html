@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Hover</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7f8fa;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .extra-info {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .project-card:hover .extra-info {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    .grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    .sub {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="project-card">
+      <div class="title">Project A</div>
+      <div class="sub">B2B Fintech</div>
+      <div>9 months, 12 ppl</div>
+      <div class="extra-info">
+        💡 Implemented online payment system in 3 countries.<br />
+        🛠️ Tech: Dev, OA, UX<br />
+        📍 Challenges: Multi-country compliance
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="title">Project B</div>
+      <div class="sub">Government</div>
+      <div>15 months, 25 ppl</div>
+      <div class="extra-info">
+        🌐 Digital transformation in public sector.<br />
+        🔐 Security level: High<br />
+        🧩 Cross-team collaboration
+      </div>
+    </div>
+  </div>
+</body>
+</html>
