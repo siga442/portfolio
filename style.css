@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+ul#project-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.project-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+li.project-item:hover {
+  background-color: #eef3f7;
+}
+
+.title {
+  font-weight: bold;
+  color: #34495e;
+  font-size: 1.2rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}
