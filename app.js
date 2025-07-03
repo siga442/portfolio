@@ -1,28 +1,51 @@
+const container = document.getElementById('project-list');
+
+function showError(message) {
+  const li = document.createElement('li');
+  li.className = 'project-item';
+  li.style.color = 'red';
+  li.textContent = `⚠️ ${message}`;
+  container.appendChild(li);
+}
+
 fetch('projects_data.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Hiba a lekéréskor: ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
   .then(data => {
-    const container = document.getElementById('project-list');
+    if (!Array.isArray(data)) {
+      throw new Error("A betöltött adat nem tömb típusú.");
+    }
+
     const fragment = document.createDocumentFragment();
 
-    data.forEach(project => {
-      const li = document.createElement('li');
-      li.className = 'project-item';
+    data.forEach((project, index) => {
+      try {
+        const li = document.createElement('li');
+        li.className = 'project-item';
 
-      const title = document.createElement('div');
-      title.className = 'title';
-      title.textContent = project?.technology || 'Névtelen projekt';
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = project?.technology?.trim() || `Projekt #${index + 1}`;
 
-      const desc = document.createElement('div');
-      desc.className = 'description';
-      desc.textContent = project?.Description || 'Nincs leírás megadva.';
+        const desc = document.createElement('div');
+        desc.className = 'description';
+        desc.textContent = project?.Description?.trim() || 'Nincs leírás megadva.';
 
-      li.appendChild(title);
-      li.appendChild(desc);
-      fragment.appendChild(li);
+        li.appendChild(title);
+        li.appendChild(desc);
+        fragment.appendChild(li);
+      } catch (itemError) {
+        console.warn(`Hiba a(z) ${index + 1}. projekt feldolgozásakor:`, itemError);
+      }
     });
 
     container.appendChild(fragment);
   })
   .catch(error => {
-    console.error("Hiba történt a JSON betöltésekor:", error);
+    console.error("Hiba:", error);
+    showError("Nem sikerült betölteni a projektadatokat.");
   });
