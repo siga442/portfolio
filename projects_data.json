@@ -9,8 +9,8 @@
     "teams.2": null,
     "teams.3": null,
     "teams.4": null,
-    "start": null,
-    "end": null,
+    "start": "2016.09.15",
+    "end": "2019.12.15",
     "Description": "Ministry of Human Capacities online study competition site projects project management 2016. September –"
   },
   {
@@ -23,8 +23,8 @@
     "teams.2": "Interactive",
     "teams.3": "Integration",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2013.03.01",
+    "end": "2014.06.31",
     "Description": "Széchenyi Zsigmond Hunting Museum – Hatvan –complete IT solution delivery: software development management 2013. March – 2014. Jun"
   },
   {
@@ -107,8 +107,8 @@
     "teams.2": null,
     "teams.3": null,
     "teams.4": null,
-    "start": null,
-    "end": null,
+    "start": "2014.02.10",
+    "end": "2015.03.05",
     "Description": "Müpa Budapest IT server infrastructure reorganisation: new server acquisition, migration to virtualised clusters as Project Manager 2014. – 2015."
   },
   {
@@ -121,8 +121,8 @@
     "teams.2": "Interactive",
     "teams.3": "Integration",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2006.02.15",
+    "end": "2019.08.25",
     "Description": "Emlékpont Museum of Hódmezővásárhely: coordination of the establishment of the IT system 2006. February – August"
   },
   {
@@ -149,8 +149,8 @@
     "teams.2": "Interactive",
     "teams.3": "Integration",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2012.08.12",
+    "end": "2019.11.19",
     "Description": "Touchscreen-kiosk software implementation 2012. September - November"
   },
   {
@@ -163,8 +163,8 @@
     "teams.2": "Interactive",
     "teams.3": "Architect",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2011.02.15",
+    "end": "2012.04.15",
     "Description": "Computer Science Museum (Szeged): exhibition creation, leading the implementation (2011 – 2012)"
   },
   {
@@ -177,8 +177,8 @@
     "teams.2": "Interactive",
     "teams.3": "Integration",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2010.10.02",
+    "end": "2011.03.20",
     "Description": "Hungarian Natural History Museum „ The Variety of LIFE” exhibition leading the implementation 2010. November– 2011. March"
   },
   {
@@ -191,8 +191,8 @@
     "teams.2": "Interactive",
     "teams.3": "Integration",
     "teams.4": "Developers",
-    "start": null,
-    "end": null,
+    "start": "2016.01.03",
+    "end": "2006.04.06",
     "Description": "Hungarian Natural History Museum „Rejtélyek, sorsok, MÚMIÁK” exhibition coordination in IT structure deployment 2006. January – April"
   }
 ]
