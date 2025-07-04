@@ -1,3 +1,43 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #222;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #ddd;
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.floating-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.floating-box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.floating-box button:hover {
+    background-color: #444;
+}
+
 #titles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
