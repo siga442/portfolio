@@ -1,4 +1,36 @@
 body {
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+
+
+
+}
+
+.floating-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-box button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.floating-box button:hover {
+    background-color: #ddd;
+}
   font-family: sans-serif;
   background: #f4f4f4;
   margin: 0;
