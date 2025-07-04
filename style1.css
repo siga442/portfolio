@@ -1,74 +1,14 @@
-/* Minimalista színjáték */
 body {
+
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #1a2a6c, #b3cde0);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     color: #333;
+
+
+
 }
 
-/* Központi elrendezés */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Szimmetrikus fejléc */
-header {
-    width: 100%;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-/* Szimmetrikus, átlátható fő tartalom */
-main {
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.card-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #1a2a6c;
-    margin: 15px;
-}
-
-.card-description {
-    font-size: 1rem;
-    color: #666;
-    margin: 15px;
-}
-
-/* Lebegő gomb */
 .floating-box {
     position: fixed;
     top: 20px;
@@ -86,24 +26,65 @@ main {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-    font-size: 0.9rem;
 }
 
 .floating-box button:hover {
     background-color: #ddd;
 }
-
-/* Lábjegyzet */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 1rem;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+ul#project-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.project-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+li.project-item:hover {
+  background-color: #eef3f7;
+}
+
+.title {
+  font-weight: bold;
+  color: #34495e;
+  font-size: 1.2rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
 }
