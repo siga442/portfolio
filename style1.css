@@ -1,0 +1,109 @@
+/* Minimalista színjáték */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #1a2a6c, #b3cde0);
+    color: #333;
+}
+
+/* Központi elrendezés */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Szimmetrikus fejléc */
+header {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Szimmetrikus, átlátható fő tartalom */
+main {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1a2a6c;
+    margin: 15px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 15px;
+}
+
+/* Lebegő gomb */
+.floating-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-box button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.floating-box button:hover {
+    background-color: #ddd;
+}
+
+/* Lábjegyzet */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
