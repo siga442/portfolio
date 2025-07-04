@@ -1,14 +1,16 @@
-<div id="titles"></div>
-<script>
-fetch('projects_data.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('titles');
-    data.forEach(title => {
-      const div = document.createElement('div');
-      div.className = 'title';
-      div.textContent = typeof title === "string" ? title : title.title;
-      container.appendChild(div);
-    });
-  });
-</script>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projektek</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Projektlista</h1>
+    <ul id="project-list"></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
