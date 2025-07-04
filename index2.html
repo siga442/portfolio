@@ -62,10 +62,25 @@
    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
+  <div class="floating-box">
+        <button id="switch-button">Váltás CSS-re</button>
+    </div>
+    <main>
     <h1>Projektlista 1.0 </h1>
     <div id="titles"></div>
   </main>
   <script src="app.js"></script>
+   <script>
+        const button = document.getElementById('switch-button');
+        const stylesheet = document.getElementById('stylesheet');
+
+        button.addEventListener('click', () => {
+            if (stylesheet.getAttribute('href') === 'style.css') {
+                stylesheet.setAttribute('href', 'style1.css');
+            } else {
+                stylesheet.setAttribute('href', 'style.css');
+            }
+        });
+    </script>
 </body>
 </html>
