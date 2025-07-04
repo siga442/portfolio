@@ -1,51 +1,36 @@
-const container = document.getElementById('project-list');
+// Get the container element where the titles will be displayed
+const container = document.getElementById('titles');
 
-function showError(message) {
-  const li = document.createElement('li');
-  li.className = 'project-item';
-  li.style.color = 'red';
-  li.textContent = `⚠️ ${message}`;
-  container.appendChild(li);
-}
-
+// Fetch the JSON file
 fetch('projects_data.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Hiba a lekéréskor: ${response.status} ${response.statusText}`);
-    }
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
-    if (!Array.isArray(data)) {
-      throw new Error("A betöltött adat nem tömb típusú.");
-    }
-
     const fragment = document.createDocumentFragment();
 
-    data.forEach((project, index) => {
-      try {
-        const li = document.createElement('li');
-        li.className = 'project-item';
+    data.forEach(project => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
 
-        const title = document.createElement('div');
-        title.className = 'title';
-        title.textContent = project?.technology?.trim() || `Projekt #${index + 1}`;
+      // Add hover info via data-extra attribute
+      const extraInfo = `Időtartam: ${project?.["Lenght (m)"] || 'ismeretlen'} hónap, Csapatméret: ${project?.["team size"] || 'n/a'}`;
+      card.setAttribute('data-extra', extraInfo);
 
-        const desc = document.createElement('div');
-        desc.className = 'description';
-        desc.textContent = project?.Description?.trim() || 'Nincs leírás megadva.';
+      const title = document.createElement('h3');
+      title.className = 'card-title';
+      title.textContent = project?.title || project?.technology || 'Névtelen projekt';
 
-        li.appendChild(title);
-        li.appendChild(desc);
-        fragment.appendChild(li);
-      } catch (itemError) {
-        console.warn(`Hiba a(z) ${index + 1}. projekt feldolgozásakor:`, itemError);
-      }
+      const description = document.createElement('p');
+      description.className = 'card-description';
+      description.textContent = project?.start || 'Nincs leírás.';
+
+      card.appendChild(title);
+      card.appendChild(description);
+      fragment.appendChild(card);
     });
 
     container.appendChild(fragment);
   })
   .catch(error => {
-    console.error("Hiba:", error);
-    showError("Nem sikerült betölteni a projektadatokat.");
+    console.error("Hiba történt a projektadatok betöltésekor:", error);
+    container.textContent = 'Nem sikerült betölteni a projekteket.';
   });
