@@ -61,12 +61,36 @@
   </style>
 </head>
 <body>
+  <div id="filter-container">
+    <button id="filter-toggle">Szűrő megjelenítése</button>
+    <div id="slider-container" class="hidden">
+      <label for="slider">Időtartam:</label>
+      <input type="range" id="slider" min="1" max="24" step="1">
+      <span id="slider-value">12</span>
+      <button id="apply-filter">Alkalmaz</button>
+    </div>
+<!--  <div class="floating-box">
+        <button id="switch-button">Váltás CSS-re</button>
+       <select id="filter">
+  <option value="all">Összes</option>
+  <option value="Lenght (m): 12">12 hónap</option>
+  <option value="team size: 5">5 fő</option>
+    </div>
+//-->
   <main>
+    <select id="filter">
+  <option value="all">Összes</option>
+  <option value="Lenght (m): 12">12 hónap</option>
+  <option value="team size: 5">5 fő</option>
+    </select>
+
+    
     <h1>Projektlista</h1>
     <div id="titles"></div>
   </main>
   <script src="app.js"></script>
-  <img src="dragon.png" alt="Dragon" class="dragon">
-<div class="fire"></div>
+  <script src="filter.js"></script>
+    <script src="slider.js"></script>
+
 </body>
 </html>
