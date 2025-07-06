@@ -15,6 +15,11 @@ document.getElementById('slider').addEventListener('input', (event) => {
   document.getElementById('slider-value').textContent = event.target.value;
 });
 
+document.querySelector('.filter-toggle').addEventListener('click', () => {
+    const sliderContainer = document.getElementById('slider-container');
+    sliderContainer.classList.toggle('hidden');
+});
+
 // Szűrés logikája slider alapján
 document.getElementById('apply-filter').addEventListener('click', () => {
   const sliderValue = document.getElementById('slider').value;
