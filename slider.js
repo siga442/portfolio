@@ -3,7 +3,6 @@ const sliderContainer = document.getElementById('slider-container');
 const slider = document.getElementById('slider');
 const sliderValue = document.getElementById('slider-value');
 const filterToggleButtons = document.querySelectorAll('.filter-toggle');
-const applyFilterButton = document.getElementById('apply-filter');
 
 // Toggle slider visibility
 filterToggleButtons.forEach(button => {
@@ -13,15 +12,11 @@ filterToggleButtons.forEach(button => {
   });
 });
 
-// Update slider value display
+// Update slider value display and filter cards automatically
 slider.addEventListener('input', (event) => {
-  sliderValue.textContent = event.target.value;
-});
-
-// Filter cards based on slider value
-applyFilterButton.addEventListener('click', () => {
-  const value = slider.value;
-  filterCardsBySlider(value);
+  const value = event.target.value;
+  sliderValue.textContent = value;
+  filterCardsBySlider(value); // Automatikus szűrés
 });
 
 // Kártyák szűrése a slider érték alapján
