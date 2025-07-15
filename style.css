@@ -87,3 +87,88 @@ li.project-item:hover {
         font-size: 0.85rem;
     }
 }
+
+/* --- DIAGRAMOK ÉS PROJEKT LISTA EGYSÉGESÍTÉSE --- */
+
+#charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+#charts > div {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(26,42,108,0.10);
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+
+#charts svg {
+  display: block;
+  margin: 0 auto;
+  background: none;
+}
+
+#charts text {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.1rem;
+  fill: #1a2a6c;
+}
+
+#titles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(26,42,108,0.10);
+  padding: 1.5rem 1rem 1rem 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(26,42,108,0.18);
+}
+
+.card-title, .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1a2a6c;
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.card-description, .description {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  #charts, #titles {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+  #charts > div, .project-card {
+    min-width: unset;
+  }
+}
