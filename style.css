@@ -6,6 +6,13 @@ body {
     padding: 1rem;
 }
 
+.chart-tooltip {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
 .floating-box {
     position: fixed;
     top: 20px;
